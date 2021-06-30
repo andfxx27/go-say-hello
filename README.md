@@ -22,5 +22,19 @@ If you are depending on a certain go module/ dependency and want to upgrade your
 2. Run `go get` to get the latest go module version release.
 
 ---
+## Major Upgrade for Module Version
+If there is an upgrade for a module, which causes a break in code (not backward compatible), there are several ways to handle this like so:
+
+### Module Developer
+1. Code all the changes for the major module upgrade.
+2. **Change** the module name for the next major version by adding 'v*' (with * being a version number), for example: `github.com/andfxx27/go-say-hello` to `github.com/andfxx27/go-say-hello/v2`, and after that you can commit and push the changes (you can use the current branch or create an entirely new branch for the major upgrade).
+3. Create new release tag for the corresponding major upgrade version.
+
+### Module User (Upgrade Dependency)
+1. **Remove** the required module from `go.mod` file which undergo a major upgrade.
+2. Get the new module upgrade by using command `go get new_module_name_with_major_upgrade`, in the case of go-say-hello module, you can use the command `go get github.com/andfxx27/go-say-hello/v2`.
+3. Since a major upgrade **usually** breaks the code, make further adjustment inside the application following the updated module.
+
+---
 ## How to
 If you want to add this module as dependency for your project, you can follow the command: `go get github.com/andfxx27/go-say-hello`.
