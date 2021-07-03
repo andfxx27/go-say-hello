@@ -2,12 +2,14 @@
 A simple go module demonstration.
 
 ---
+
 ## Tag
 Create tag for current project
 1. `git tag version_name`.
 2. `git push origin main version_name`.
 
 ---
+
 ## Upgrade Module Version
 To upgrade your module version, please follow below steps for:
 
@@ -22,6 +24,7 @@ If you are depending on a certain go module/ dependency and want to upgrade your
 2. Run `go get` to get the latest go module version release.
 
 ---
+
 ## Major Upgrade for Module Version
 If there is an upgrade for a module, which causes a break in code (not backward compatible), there are several ways to handle this like so:
 
@@ -36,5 +39,11 @@ If there is an upgrade for a module, which causes a break in code (not backward 
 3. Since a major upgrade **usually** breaks the code, make further adjustment inside the application following the updated module.
 
 ---
+
 ## How to
 If you want to add this module as dependency for your project, you can follow the command: `go get github.com/andfxx27/go-say-hello`.
+
+---
+
+## Inspiration and special thanks
+Special thanks to [Programmer Zaman Now](https://www.youtube.com/c/ProgrammerZamanNow/videos) YouTube Channel for the go-module learning material.
